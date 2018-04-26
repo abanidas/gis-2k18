@@ -36,4 +36,12 @@
 
     <string name="featured_story_sample_description">"25 Android libraries you definitely want to try out in early 2017"</string>
 
+    <string-array name="array_challenge_types">
+        <item>Cloning App Challenge</item>
+        <item>Bug Fix Challenge</item>
+        <item>Material Design Challenge</item>
+    </string-array>
+
+    <string name="action_share">Share</string>
+    <string name="action_comment">Comment</string>
 </resources>

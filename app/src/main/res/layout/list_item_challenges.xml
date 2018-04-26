@@ -8,13 +8,14 @@
     android:layout_marginTop="3dp"
     android:elevation="5dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="3dp"
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/layout_author_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -27,32 +28,61 @@
                 android:layout_centerVertical="true"
                 android:src="@drawable/gis_logo" />
 
-            <TextView
-                android:id="@+id/tv_author_name_challenges"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:maxLines="1"
-                android:paddingLeft="8dp"
-                android:paddingTop="12dp"
-                android:text="Akshit Jain"
-                android:textColor="@color/black" />
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_author_name_challenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akshit Jain"
+                    android:textColor="@color/black" />
+
+                <!-- Added this TextView to display the time when the submitted by participant -->
+                <TextView
+                    android:id="@+id/tv_submission_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12:30 AM, 26/04/2018"
+                    android:textSize="8sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/lightGray" />
+            </LinearLayout>
+
+            <!-- Added this ImageButton to add some additional action to the challenge contents -->
+            <ImageButton
+                android:id="@+id/btn_additional_action"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                style="?android:attr/actionOverflowButtonStyle"/>
+
         </LinearLayout>
 
         <ImageView
             android:id="@+id/iv_upload_image_challenges"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_sample_story_bg_2" />
+            android:src="@drawable/ic_sample_story_bg_2"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_below="@id/layout_author_detail"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorOverlayWhite">
 
+            <!-- TextView to display challenge title given by author -->
             <TextView
                 android:id="@+id/tv_topic_title_challenges"
                 android:layout_width="match_parent"
@@ -72,20 +102,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-
+                <!-- TextView to see more about this content -->
                 <TextView
                     android:id="@+id/tv_description_challenges"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:maxLines="1"
                     android:paddingTop="10dp"
-                    android:text="READ"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:text="READ MORE"
+                    android:textColor="@color/colorAccent"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
 
+                <!-- Like button -->
                 <ImageView
                     android:id="@+id/iv_favourites_challenges"
                     android:layout_width="30dp"
@@ -95,9 +126,17 @@
                     android:src="@drawable/ic_heart_outline"
                     android:tint="@color/black" />
 
+                <!-- TextView to display number of likes given to this content -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="1K"/>
+
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

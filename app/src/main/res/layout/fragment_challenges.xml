@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/challenges_recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardCornerRadius="0dp">
+
+            <!-- Added this spinner to switch between different challenges -->
+            <Spinner
+                android:id="@+id/spinner_challenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_challenge_types"
+                android:layout_margin="4dp"
+                android:padding="5dp"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/card_spinner"
+            android:id="@+id/challenges_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
 </FrameLayout>
