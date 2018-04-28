@@ -74,27 +74,32 @@
             android:layout_below="@id/layout_author_detail"/>
 
         <LinearLayout
+            android:id="@+id/layout_footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorOverlayWhite">
+            android:background="@color/colorOverlayBlack">
 
             <!-- TextView to display challenge title given by author -->
             <TextView
                 android:id="@+id/tv_topic_title_challenges"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:text="Copy Layout Challenge"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:layout_gravity="start"
+                android:background="@drawable/bg_drawable_chip"/>
 
 
             <LinearLayout
@@ -110,11 +115,20 @@
                     android:layout_weight="1"
                     android:maxLines="1"
                     android:paddingTop="10dp"
+                    android:paddingLeft="12dp"
                     android:text="READ MORE"
                     android:textColor="@color/colorAccent"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_insert_comment_black_24dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:tint="@color/white"/>
 
                 <!-- Like button -->
                 <ImageView
@@ -123,16 +137,16 @@
                     android:layout_height="30dp"
                     android:ellipsize="end"
                     android:padding="4dp"
-                    android:src="@drawable/ic_heart_outline"
-                    android:tint="@color/black" />
+                    android:src="@drawable/ic_heart_filled"
+                    android:tint="@color/darkRed" />
 
                 <!-- TextView to display number of likes given to this content -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:text="1K"/>
+                    android:textColor="@color/white"
+                    android:text="234"/>
 
             </LinearLayout>
 

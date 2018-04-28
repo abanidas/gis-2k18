@@ -8,9 +8,4 @@
         app:showAsAction="never"
         android:title="@string/action_share"/>
 
-    <item android:id="@+id/action_comment"
-        android:orderInCategory="2"
-        app:showAsAction="never"
-        android:title="@string/action_comment"/>
-
 </menu>

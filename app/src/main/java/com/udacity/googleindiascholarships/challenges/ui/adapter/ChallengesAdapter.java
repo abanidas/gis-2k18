@@ -3,7 +3,6 @@ package com.udacity.googleindiascholarships.challenges.ui.adapter;
 import android.content.Context;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.View;
@@ -68,8 +67,8 @@ public class ChallengesAdapter extends RecyclerView.Adapter<ChallengesAdapter.Ch
 
         public ChallengesCardViewHolder(View itemView) {
             super(itemView);
-            challengeAuthorNameTextView = (TextView) itemView.findViewById(R.id.tv_author_name_challenges);
-            btnAdditionalAction = (ImageButton) itemView.findViewById(R.id.btn_additional_action);
+            challengeAuthorNameTextView = itemView.findViewById(R.id.tv_author_name_challenges);
+            btnAdditionalAction = itemView.findViewById(R.id.btn_additional_action);
 
         }
     }

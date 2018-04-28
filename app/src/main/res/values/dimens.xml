@@ -12,4 +12,8 @@
     <dimen name="splash_app_version_text_size">15sp</dimen>
     <dimen name="splash_app_version_margin_bottom">30dp</dimen>
     <dimen name="splash_app_name_text_size">20sp</dimen>
+
+    <dimen name="chip_padding_vertical">8dp</dimen>
+    <dimen name="chip_padding_horizontal">16dp</dimen>
+    <dimen name="chip_radius">30dp</dimen>
 </resources>
