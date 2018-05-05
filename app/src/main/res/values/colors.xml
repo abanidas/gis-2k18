@@ -15,4 +15,10 @@
 
     <color name="opaqueWhite">#90ffffff</color>
     <color name="secondaryLight">#90ffffff</color>
+    <color name="color_border_profile_pricture">#55000000</color>
+    <color name="material_red">#d64161</color>
+    <color name="colorPrimaryLight">#F1F9FF</color>
+    <color name="colorPrimaryExtraDark">#2175BC</color>
+    <color name="overlayBlack">#88000000</color>
+
 </resources>

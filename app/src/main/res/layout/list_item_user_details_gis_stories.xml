@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/stories_card_width"
+    android:layout_height="@dimen/stories_card_height"
+    app:cardCornerRadius="@dimen/cardview_large_radius"
+    android:elevation="@dimen/card_view_elevation"
+    android:layout_margin="@dimen/card_standard_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_profile_gis_story_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/darkBlue"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/description_text_padding">
+
+
+
+                <ImageView
+                    android:id="@+id/iv_profile_gis_story_profile_pic"
+                    android:layout_width="@dimen/user_picture_diameter_small"
+                    android:layout_height="@dimen/user_picture_diameter_small"
+                    android:src="@drawable/gis_logo"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_profile_gis_story_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_user_name"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/paragraph_standard_padding"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_profile_gis_story_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/profile_gis_story_sample_description"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_standard_size"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:visibility="visible"
+                android:padding="@dimen/paragraph_standard_padding"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/iv_profile_gis_story_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_read_more"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:padding="@dimen/read_action_text_padding"/>
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+
+</android.support.v7.widget.CardView>

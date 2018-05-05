@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.udacity.googleindiascholarships.R;
 import com.udacity.googleindiascholarships.challenges.ui.ChallengesFragment;
 import com.udacity.googleindiascholarships.community.ui.CommunityFragment;
+import com.udacity.googleindiascholarships.currentuser.ui.UserDetailsActivity;
 import com.udacity.googleindiascholarships.members.ui.MembersFragment;
 import com.udacity.googleindiascholarships.projects.ui.ProjectsFragment;
 import com.udacity.googleindiascholarships.quizzes.ui.QuizzesFragment;
@@ -179,6 +180,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_settings:
                 fragment = new SettingsFragment();
+                break;
+            case R.id.nav_my_profile:
+                startActivity(new Intent(MainActivity.this, UserDetailsActivity.class));
                 break;
         }
 

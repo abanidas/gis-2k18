@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.udacity.googleindiascholarships.currentuser.ui.UserDetailsAboutTabFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/paragraph_standard_padding"
+        android:layout_margin="@dimen/layout_margin_small"
+        android:background="@color/colorPrimaryLight"
+        android:elevation="@dimen/card_elevation_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_title_short_description"
+                android:textColor="@color/darkBlue"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/description_text_padding"
+                android:paddingTop="@dimen/description_text_padding"
+                android:textSize="@dimen/sp_standard_size"/>
+
+            <ImageButton
+                android:id="@+id/btn_user_description_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/action_button_margin_right"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:backgroundTint="@android:color/transparent"
+                android:tint="@color/darkGray"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_user_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_short_description_sample"
+            android:textColor="@color/colorPrimaryExtraDark"
+            android:padding="@dimen/description_text_padding"/>
+
+        <EditText
+            android:id="@+id/et_user_description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/sp_medium_size"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/paragraph_standard_padding"
+        android:layout_margin="@dimen/layout_margin_small"
+        android:background="@color/colorPrimaryLight"
+        android:elevation="@dimen/card_elevation_small">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_skill_title"
+                android:textColor="@color/darkBlue"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/description_text_padding"
+                android:paddingTop="@dimen/description_text_padding"
+                android:textSize="@dimen/sp_standard_size"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/btn_user_skill_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/action_button_margin_right"
+                android:layout_gravity="bottom"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:backgroundTint="@android:color/transparent"
+                android:tint="@color/darkGray"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_user_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_skills_sample"
+            android:textColor="@color/darkBlue"
+            android:padding="@dimen/description_text_padding"/>
+
+
+        <EditText
+            android:id="@+id/et_user_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_skills_sample"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/sp_medium_size"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</LinearLayout>

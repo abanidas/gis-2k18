@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/project_card_diameter"
+    android:layout_height="@dimen/project_card_diameter"
+    app:cardCornerRadius="@dimen/cardview_large_radius"
+    android:elevation="@dimen/card_view_elevation"
+    android:layout_margin="@dimen/card_standard_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_user_gis_project_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_sample_profile_gis_project_1"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/project_demo_title"
+            android:padding="@dimen/text_margin_small"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"/>
+
+
+        <FrameLayout
+            android:id="@+id/fl_menu_edit_story"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlayBlack">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:background="@color/white"
+                    android:padding="@dimen/icon_button_padding"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/action_button_margin_left"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:tint="@android:color/holo_red_dark"
+                    android:background="@color/white"
+                    android:padding="@dimen/icon_button_padding"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btn_user_project_edit"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/icon_button_padding"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:background="@color/colorPrimary"/>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>
