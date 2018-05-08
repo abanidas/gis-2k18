@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -53,7 +54,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     Toolbar toolbar;
     FloatingActionButton editProfileButton;
     ImageButton btnEditUserProfileView;
-    TextView tvUserName, tvUserShortDescription;
     EditText etUserName, etUserShortDescription;
     boolean userProfileEditFlag = false;
 
@@ -66,8 +66,6 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         btnProfilePictureEdit = (ImageButton) findViewById(R.id.ib_edit_profile_pic);
         etUserName = (EditText) findViewById(R.id.et_user_name);
         etUserShortDescription = (EditText) findViewById(R.id.et_edit_user_short_description);
-        tvUserName = (TextView) findViewById(R.id.tv_user_name);
-        tvUserShortDescription = (TextView) findViewById(R.id.tv_user_short_description);
 
         btnEditUserProfileView.setOnClickListener(this);
         btnProfilePictureEdit.setOnClickListener(this);
@@ -119,23 +117,19 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 if (!userProfileEditFlag) {
                     userProfileEditFlag = true;
                     btnProfilePictureEdit.setVisibility(View.VISIBLE);
-                    etUserName.setVisibility(View.VISIBLE);
-                    etUserShortDescription.setVisibility(View.VISIBLE);
-                    tvUserName.setVisibility(View.GONE);
-                    tvUserShortDescription.setVisibility(View.GONE);
+                    etUserName.setFocusableInTouchMode(true);
+                    etUserShortDescription.setFocusableInTouchMode(true);
+                    etUserName.setBackgroundColor(getResources().getColor(R.color.color_overlay_black));
+                    etUserShortDescription.setBackgroundColor(getResources().getColor(R.color.color_overlay_black));
                     btnEditUserProfileView.setImageResource(R.drawable.ic_tick_save);
-                    etUserName.setText(tvUserName.getText());
-                    etUserShortDescription.setText(tvUserShortDescription.getText());
                 } else {
                     userProfileEditFlag = false;
                     btnProfilePictureEdit.setVisibility(View.GONE);
-                    etUserName.setVisibility(View.GONE);
-                    etUserShortDescription.setVisibility(View.GONE);
-                    tvUserName.setVisibility(View.VISIBLE);
-                    tvUserShortDescription.setVisibility(View.VISIBLE);
+                    etUserName.setFocusable(false);
+                    etUserShortDescription.setFocusable(false);
+                    etUserName.setBackgroundColor(Color.TRANSPARENT);
+                    etUserShortDescription.setBackgroundColor(Color.TRANSPARENT);
                     btnEditUserProfileView.setImageResource(R.drawable.ic_edit_black_24dp);
-                    tvUserName.setText(etUserName.getText());
-                    tvUserShortDescription.setText(etUserShortDescription.getText());
                 }
                 break;
             case R.id.ib_edit_profile_pic:

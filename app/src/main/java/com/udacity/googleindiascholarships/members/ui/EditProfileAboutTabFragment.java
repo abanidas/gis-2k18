@@ -18,10 +18,8 @@ import com.udacity.googleindiascholarships.R;
 public class EditProfileAboutTabFragment extends Fragment {
 
     private boolean editSkillFlag = false, editDescriptionFlag = false;
-    TextView tvUserSkills;
     EditText etUserSkills;
     ImageButton btnUserSkillEdit;
-    TextView tvUserDescription;
     EditText etUserDescription;
     ImageButton btnUserDescriptionEdit;
 
@@ -37,11 +35,9 @@ public class EditProfileAboutTabFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_profile_about_tab, container, false);
 
-        tvUserSkills = view.findViewById(R.id.tv_user_skills);
         etUserSkills = view.findViewById(R.id.et_user_skills);
         btnUserSkillEdit = view.findViewById(R.id.btn_user_skill_edit);
 
-        tvUserDescription = view.findViewById(R.id.tv_user_description);
         etUserDescription = view.findViewById(R.id.et_user_description_edit);
         btnUserDescriptionEdit = view.findViewById(R.id.btn_user_description_edit);
 
@@ -56,15 +52,13 @@ public class EditProfileAboutTabFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!editSkillFlag) {
-                    tvUserSkills.setVisibility(View.GONE);
-                    etUserSkills.setVisibility(View.VISIBLE);
-                    etUserSkills.setText(tvUserSkills.getText());
+                    etUserSkills.setFocusableInTouchMode(true);
+                    etUserSkills.setEnabled(true);
                     btnUserSkillEdit.setImageResource(R.drawable.ic_tick_save);
                     editSkillFlag = true;
                 } else {
-                    tvUserSkills.setVisibility(View.VISIBLE);
-                    etUserSkills.setVisibility(View.GONE);
-                    tvUserSkills.setText(etUserSkills.getText());
+                    etUserSkills.setFocusable(false);
+                    etUserSkills.setEnabled(false);
                     btnUserSkillEdit.setImageResource(R.drawable.ic_edit_black_24dp);
                     editSkillFlag = false;
 
@@ -76,15 +70,13 @@ public class EditProfileAboutTabFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!editDescriptionFlag) {
-                    tvUserDescription.setVisibility(View.GONE);
-                    etUserDescription.setVisibility(View.VISIBLE);
-                    etUserDescription.setText(tvUserDescription.getText());
+                    etUserDescription.setFocusableInTouchMode(true);
+                    etUserDescription.setEnabled(true);
                     btnUserDescriptionEdit.setImageResource(R.drawable.ic_tick_save);
                     editDescriptionFlag = true;
                 } else {
-                    tvUserDescription.setVisibility(View.VISIBLE);
-                    etUserDescription.setVisibility(View.GONE);
-                    tvUserDescription.setText(etUserDescription.getText());
+                    etUserDescription.setFocusable(false);
+                    etUserDescription.setEnabled(false);
                     btnUserDescriptionEdit.setImageResource(R.drawable.ic_edit_black_24dp);
                     editDescriptionFlag = false;
 

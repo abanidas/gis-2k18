@@ -45,7 +45,7 @@
                         android:layout_height="100dp"
                         android:src="@drawable/gis_logo"
                         app:civ_border_width="2dp"
-                        app:civ_border_color="@color/color_border_profile_pricture"/>
+                        app:civ_border_color="@color/color_overlay_black"/>
 
                     <ImageButton
                         android:id="@+id/ib_edit_profile_pic"
@@ -59,18 +59,8 @@
                         android:visibility="gone"/>
                 </FrameLayout>
 
-                <TextView
-                    android:id="@+id/tv_user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text_user_name"
-                    android:textColor="@color/lightWhite"
-                    android:textSize="@dimen/sp_standard_size"
-                    android:textStyle="bold"
-                    android:layout_marginTop="12dp"
-                    android:layout_gravity="center_horizontal" />
-
                 <EditText
+                    android:padding="2dp"
                     android:id="@+id/et_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,26 +70,19 @@
                     android:textStyle="bold"
                     android:layout_margin="4dp"
                     android:layout_gravity="center_horizontal"
-                    android:visibility="gone"/>
-
-                <TextView
-                    android:id="@+id/tv_user_short_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android Developer"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal" />
+                    android:background="@android:color/transparent"
+                    android:focusable="false"/>
 
                 <EditText
+                    android:padding="2dp"
                     android:id="@+id/et_edit_user_short_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Android Developer"
                     android:textSize="14sp"
                     android:layout_gravity="center_horizontal"
-                    android:visibility="gone"/>
+                    android:background="@android:color/transparent"
+                    android:focusable="false"/>
             </LinearLayout>
 
             <android.support.v7.widget.Toolbar
